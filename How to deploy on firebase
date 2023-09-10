@@ -1,0 +1,19 @@
+As the Portfolio project already uses the old technologies I did the following
+
+1. To run this project with 'npm start'
+ change in 'package.json' the "start": "react-scripts start",
+ to "start": "react-scripts --openssl-legacy-provider start". 
+ 
+ 2. Install the Firebase and then Firebase tools running the following commands in consode. 
+ a. npm i firebase --legacy-peer-deps
+ b. npm i firebase-tools --legacy-peer-deps
+ 
+ 3. Install the firebase-tools packages on Linux. Put in Terminal
+ sudo npm i -g firebase-tools
+ 
+ 4. Create a "build" folder of the static files of your project by running:
+a. npm rund build
+b. If 'a' didn't work, then 'NODE_OPTIONS='--openssl-legacy-provider' npm run build'
+ 
+ 5. Enter in the folder root of your project 'firebase init'
+ 
