@@ -5,7 +5,7 @@ console.log(`Here is a list of icon names used by this component: ${iconList}`)
 
 const Skills = () => {
   return (
-    <div className="skills-wrapper">
+    <div id="skills" className="skills-wrapper">
       <div className="container">
         <h1 className="text-uppercase text-center py-5">skills</h1>
         <ul className="icon-box-wrapper">

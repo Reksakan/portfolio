@@ -2,6 +2,7 @@ import React from 'react';
 import netflix from "../images/runisfun.JPG";
 import cityGuide from "../images/BrainFlix.JPG";
 import portfolio from "../images/portfolio5.JPG";
+import dashboardmern from "../images/dashboard-mern.jpg";
 import taskManager from "../images/task-manager.png";
 //FONT AWESOME IMPORTS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -65,7 +66,7 @@ const openPopupboxPortfolio =() => {
   const content = (
     <>
       <img className="portfolio-image-popupbox" src={portfolio} alt="Portfolio Project..." />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate molestias modi id, maiores voluptas at labore quis officiis laboriosam tempore quia et harum est odio, iste eveniet? Perspiciatis, optio?</p>
+      <p>Portfolio web site was built using ReactJS , React Hooks, bootstrap, react-particles and etc. </p>
       <b>GitHub: </b><a className="hyper-link" onClick={()=> window.open("https://github.com/Reksakan/reksa-portfolio")}>https://github.com/Reksakan/reksa-portfolio</a>
     </>
   )
@@ -76,6 +77,29 @@ const popupboxConfigPortfolio = {
   titleBar: {
     enable: true,
     text: "Portfolio React project."
+  },
+  fadeIn: true,
+  fadeInSpeed: 600
+}
+
+//Dashboard MERN Project
+const openPopupboxDashboardMERN =() => {
+  const content = (
+    <>
+      <img className="portfolio-image-popupbox" src={dashboardmern} alt="Dashboard MERN Project..." />
+      <p>Dashboard project was built using MERN stack. </p>
+      <b>Demo: </b><a className="hyper-link" onClick={()=> window.open("https://dashboard-mern-client.onrender.com", "_blank")}>https://dashboard-mern-client.onrender.com</a>
+      <br />
+      <b>GitHub: </b><a className="hyper-link" onClick={()=> window.open("https://github.com/Reksakan/dashboard-mern")}>https://github.com/Reksakan/dashboard-mern</a>
+    </>
+  )
+  PopupboxManager.open({ content })
+}
+
+const popupboxConfigDashboardMERN = {
+  titleBar: {
+    enable: true,
+    text: "Dashboard MERN project."
   },
   fadeIn: true,
   fadeInSpeed: 600
@@ -124,7 +148,15 @@ const popupboxConfigTaskManager = {
             <div className="overflow"></div>
             <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
           </div>
+          {/* - */}          
           {/* - */}
+          <div className="portfolio-image-box" onClick={openPopupboxDashboardMERN}>
+            <img className="portfolio-image" src={dashboardmern} alt="Dashboard MERN" />
+            <div className="overflow"></div>
+            <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
+          </div>
+          {/* - */}
+
           {/* <div className="portfolio-image-box" onClick={openPopupboxTaskManager}>
             <img className="portfolio-image" src={taskManager} alt="Task Manager React and Redux Project..." />
             <div className="overflow"></div>
